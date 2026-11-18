@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+      	 <meta charset="UTF-8">
+      	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      	   <title>Lesotho Tourism - Gallery</title>
+      	   <link rel="stylesheet" href="style.css">
+      	      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      	          </head>
+      	           <body>
+      	           	   <header>
+      	           	   	   <h1>Lesotho Tourism</h1>
+      	           	   	     <nav><a href="index.html">Home</a>
+      	           	   	     	 <a href="about.html">About</a>
+      	           	   	     	   <a href="places.html">Places</a>
+      	           	   	     	      <a href="gallery.html">Gallery</a>
+      	           	   	     	        <a href="contact.html">Contact</a>
+      	           	   	     	    </nav><button onclick="darkMode()">Dark / Light</button>
+      	           	   	     	 </header>
+      	           	   	     <main>
+      	           	   	     	<h2>Photo Gallery</h2>
+      	           	   	     	<p>Use the buttons to look through the pictures.</p>
+      	           	   	     	 	<div class="hero">
+      	           	   	     	 		<img id="bigPicture" src="mountains.jpg" alt="mountains.jpg" style="width:100%;max-height:400px;object-fit:cover">
+
+      	           	   	     	 	<p id="mountains.jpg">Mountain scenery</p>
+      	           	   	     	 		<button onclick="previousPic()">Previous</button>
+      	           	   	     	 		   <button onclick="nextPic()">Next</button></div>
+      	           	   	     	 		      <div class="cards">
+      	           	   	     	 		      	  <div class="card">
+      	           	   	     	 		  <img onclick="choosePic(0)" src="mountains.jpg" alt="mountains.jpg"><p>Mountains</p>
+      	           	   	     	 	</div>
+      	           	   	     	<div class="card">
+      	           	   	     		<img onclick="choosePic(1)" src="waterfall.jpg" alt="waterfall.jpg">
+      	           	   	     <p>Waterfall</p>
+      	           	   	 </div>
+      	           	   	<div class="card">
+      	           	   		 <img onclick="choosePic(2)" src="dam.jpg" alt="dam.jpg"><p>Dam</p>
+      	           	   		 </div>
+      	           	   		 <div class="card">
+      	           	   		 	  <img onclick="choosePic(3)" src="horsess.jpg" alt="horsess.jpg">
+      	           	   		 	   <p>Horses</p>
+      	           	   		 </div>
+      	           	   </div>
+      	           	</main>
+      	           	<footer>
+      	           		<p>Visit the beautiful Kingdom of Lesotho</p>
+      	           		<p>Bohlokoa Taaso 901015693</p>
+      	           	</footer>
+      	           	<script src="script.js">
+      	           	
+      	           	</script>
+      	          </body>
+      	        </html>

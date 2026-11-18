@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events Quiz</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #193e68;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .question {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        h2 {
+            color: #193e68;
+        }
+
+        button {
+            background-color: #193e68;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2865a0;
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Events Quiz</h1>
+
+    <div class="container">
+
+      
+
+        <div class="question">
+
+            <h2>Question 1: Button Click Event</h2>
+
+            <h3>Welcome to JavaScript Events</h3>
+
+            <button onclick="myFunction()">Click Me</button>
+
+        </div>
+
+
+    
+
+        <div class="question">
+
+            <h2>Question 2: Change Text</h2>
+
+            <p id="myText">This is the original text</p>
+
+            <button onclick="changeText()">Change Text</button>
+
+        </div>
+
+
+      
+
+        <div class="question">
+
+            <h2>Question 3: Mouse Events</h2>
+
+            <p>Move your mouse over the box.</p>
+
+            <div class="box"
+                 onmouseover="changeBlue()"
+                 onmouseout="changeYellow()">
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 4 -->
+
+        <div class="question">
+
+            <h2>Question 4: Registration Form</h2>
+
+            <form onsubmit="register(event)">
+
+                <label>Full Name:</label><br>
+                <input type="text" id="fullname" required>
+
+                <br><br>
+
+                <label>Email Address:</label><br>
+                <input type="email" id="email" required>
+
+                <br><br>
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </div>
+
+
+        
+
+        <div class="question">
+
+            <h2>Question 5: Key Press Event</h2>
+
+            <input type="text" id="myInput"
+                   placeholder="Start typing...">
+
+            <p id="result">Start typing...</p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+       
+
+        function myFunction() {
+
+            alert("Hello! Welcome to JavaScript");
+
+        }
+
+
+        // QUESTION 2
+
+        function changeText() {
+
+            document.getElementById("myText").innerHTML =
+            "JavaScript makes webpages interactive!";
+
+        }
+
+
+        
+
+        function changeBlue() {
+
+            document.querySelector(".box").style.backgroundColor = "blue";
+
+        }
+
+        function changeYellow() {
+
+            document.querySelector(".box").style.backgroundColor = "yellow";
+
+        }
+
+
+     
+
+        function register(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("fullname").value;
+
+            alert("Hello " + name + "\nRegistration Successful");
+
+        }
+
+
+      
+
+        document.getElementById("myInput").oninput = function() {
+
+            let text = document.getElementById("myInput").value;
+
+            document.getElementById("result").innerHTML = text;
+
+        };
+
+    </script>
+
+</body>
+</html>
